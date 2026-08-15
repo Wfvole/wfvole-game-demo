@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d923bfd5a05e6b14ba937117e3017d4e, type: 3}
+  m_Name: FloorData
+  m_EditorClassIdentifier: 
+  buildingName: "\u5730\u677F"
+  prefab: {fileID: 2295305215068128332, guid: 0b559e5ed9f8f9f44be9002512389850, type: 3}
+  size: {x: 1, y: 1}
+  type: 4
+  useResourceType: 0
+  consume: 0
+  buildTime: 0
+  canConnect: 0
+  introduction: "\u5730\u677F\uFF1A\u6807\u8BB0\u7F51\u683C"
+  lightRate: 0
+  lifeRate: 0
+  buildCostLight: 0
+  buildCostLife: 0
+  buildingMaxHealth: 100

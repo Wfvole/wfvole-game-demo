@@ -1,0 +1,40 @@
+-- Tencent is pleased to support the open source community by making xLua available.
+-- Copyright (C) 2016 THL A29 Limited, a Tencent company. All rights reserved.
+-- Licensed under the MIT License (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+-- http://opensource.org/licenses/MIT
+-- Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+---@diagnostic disable: undefined-global, undefined-field, need-check-nil
+
+local speed = 10
+---@type any
+local lightCpnt = nil
+
+function luaReadBuildingData(buildingdata)
+    if self == nil or buildingdata == nil then
+        return
+    end
+
+    local buildingName = buildingdata.buildingName
+    if buildingName == nil or buildingName == "" then
+        buildingName = buildingdata.name
+    end
+
+    if self.nameText ~= nil then
+        self.nameText.text = buildingName or ""
+    end
+
+    if self.introductionText ~= nil then
+        self.introductionText.text = buildingdata.introduction or ""
+    end
+
+    if self.produceText ~= nil then
+        self.produceText.text = "产出" .. "光" .. string.format("%.1f", buildingdata.lightRate or 0) .. "/s  生命" .. string.format("%.1f", buildingdata.lifeRate or 0) .. "/s"
+    end
+
+    if self.consumeText ~= nil then
+        self.consumeText.text = "消耗" .. tostring(buildingdata.useResourceType) .. string.format("%.1f", buildingdata.consume or 0) .. "/s"
+    end
+end
+
+

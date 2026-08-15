@@ -1,0 +1,59 @@
+# ========== Unity 自动生成缓存 ==========
+# 这些目录删掉后 Unity 会自动重建，绝不进版本库
+Library/
+Temp/
+obj/
+Logs/
+UserSettings/
+MemoryCaptures/
+Recordings/
+
+# ========== 构建产物 ==========
+# 自定义构建输出目录（你的 WebGL 构建在这里）
+output/
+Build/
+Builds/
+BurstAotOutput_*/
+DLLs/
+*.apk
+*.aab
+*.unitypackage
+
+# ========== 编译生成文件（Unity 自动生成，无需提交） ==========
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# ========== IDE / 工具 ==========
+.vscode/
+.vs/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ========== 日志 ==========
+*.log
+compact_log.txt
+
+# ========== 本项目特有 ==========
+# Burst 调试信息（临时生成）
+实验生成_BurstDebugInformation_DoNotShip/
+# EmmyLua 调试数据
+.EmmyLuaUnity/
+# CodeBuddy 项目数据
+.codebuddy/
+
+# ========== XLua 生成代码（可选，通常不提交） ==========
+# 如需提交请注释掉下面两行
+Assets/XLua/Gen/
+XLuaGen/
