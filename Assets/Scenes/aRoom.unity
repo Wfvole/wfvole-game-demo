@@ -877,7 +877,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &475504406
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -6176,7 +6176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &978337275
 Transform:
   m_ObjectHideFlags: 0
@@ -6290,7 +6290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1004768194
 Transform:
   m_ObjectHideFlags: 0
@@ -6630,7 +6630,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1284944037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6766,7 +6766,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1350507965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6952,7 +6952,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &1372198474
 AudioListener:
   m_ObjectHideFlags: 0
@@ -7365,7 +7365,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1520801032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8592,7 +8592,7 @@ PrefabInstance:
     - target: {fileID: 7903281305060128193, guid: 556937d469fffd34a83b494ee23a6666,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7999825138657388059, guid: 556937d469fffd34a83b494ee23a6666,
         type: 3}
@@ -8712,7 +8712,7 @@ PrefabInstance:
     - target: {fileID: 1140128689049597797, guid: d8ce12df41f2d324c8e9a7b888403eb3,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5084180744693974874, guid: d8ce12df41f2d324c8e9a7b888403eb3,
         type: 3}
@@ -8747,7 +8747,7 @@ PrefabInstance:
     - target: {fileID: 5412030814827812068, guid: d8ce12df41f2d324c8e9a7b888403eb3,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5555700231457379016, guid: d8ce12df41f2d324c8e9a7b888403eb3,
         type: 3}
@@ -8832,7 +8832,7 @@ PrefabInstance:
     - target: {fileID: 6997401048655252854, guid: d8ce12df41f2d324c8e9a7b888403eb3,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7215408743408894976, guid: d8ce12df41f2d324c8e9a7b888403eb3,
         type: 3}
@@ -8937,7 +8937,7 @@ PrefabInstance:
     - target: {fileID: 7846852237356675370, guid: d8ce12df41f2d324c8e9a7b888403eb3,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8592645245403501127, guid: d8ce12df41f2d324c8e9a7b888403eb3,
         type: 3}
@@ -8982,7 +8982,7 @@ PrefabInstance:
     - target: {fileID: 9168429681538834227, guid: d8ce12df41f2d324c8e9a7b888403eb3,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
