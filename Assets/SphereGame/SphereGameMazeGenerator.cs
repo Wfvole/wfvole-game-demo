@@ -52,14 +52,13 @@ public class SphereGameMazeGenerator : MonoBehaviour
             {
                 StartCoroutine(GenerateMaze());
                 generateListen = false;
-                //Eventmanager.Instance.AddListener("CreateMaze", GetCreateMazeBool);
             }
         }
     }
 
     public IEnumerator GenerateMaze()
     {
-        // ´´½¨Íø¸ñ¶ÔÏó
+        // åˆ›å»ºç½‘æ ¼å¯¹è±¡
         GameObject gridObj = new GameObject("SphereGameMazeGrid");
         grid = gridObj.AddComponent<SphereGameMazeGrid>();
         grid.width = width;
@@ -69,7 +68,7 @@ public class SphereGameMazeGenerator : MonoBehaviour
         grid.Initialize();
         grid.tag="mazegb";
 
-        // ¸ù¾İËùÑ¡Ëã·¨ÔËĞĞÉú³ÉĞ­³Ì
+        // æ ¹æ®æ‰€é€‰ç®—æ³•è¿è¡Œç”Ÿæˆåç¨‹
         switch (algorithm)
         {
             case Algorithm.Prim:
@@ -83,16 +82,16 @@ public class SphereGameMazeGenerator : MonoBehaviour
         //Debug.Log("Maze generation finished.");
     }
 
-    // ---------- Prim Ëã·¨ ----------
+    // ---------- Prim ç®—æ³• ----------
     private IEnumerator PrimGenerator()
     {
-        // ÊÕ¼¯ËùÓĞµØ°åµ¥Ôª¸ñ
+        // æ”¶é›†æ‰€æœ‰åœ°æ¿å•å…ƒæ ¼
         List<SphereGameMazeGrid.Cell> allFloors = new List<SphereGameMazeGrid.Cell>();
         for (int y = 0; y < length; y++)
             for (int x = 0; x < width; x++)
                 allFloors.Add(grid.GetRoomCell(x, y));
 
-        // Ëæ»úÑ¡Æğµã
+        // éšæœºé€‰èµ·ç‚¹
         int startIdx = Random.Range(0, allFloors.Count);
         SphereGameMazeGrid.Cell start = allFloors[startIdx];
         start.visited = true;
@@ -103,14 +102,14 @@ public class SphereGameMazeGenerator : MonoBehaviour
         int generateNum = 0;
         while (allFloors.Count > 0)
         {
-            if (frontier.Count == 0) break; // °²È«ÍË³ö
+            if (frontier.Count == 0) break; // å®‰å…¨é€€å‡º
             generateNum++;
-            // Ëæ»úÑ¡Ò»¸ö frontier µ¥Ôª¸ñ
+            // éšæœºé€‰ä¸€ä¸ª frontier å•å…ƒæ ¼
             int idx = Random.Range(0, frontier.Count);
             SphereGameMazeGrid.Cell current = frontier[idx];
             frontier.RemoveAt(idx);
 
-            // ÕÒÒ»¸öÒÑ·ÃÎÊµÄÁÚ¾Ó£¨È·±£ÖÁÉÙÓĞÒ»¸ö£©
+            // æ‰¾ä¸€ä¸ªå·²è®¿é—®çš„é‚»å±…ï¼ˆç¡®ä¿è‡³å°‘æœ‰ä¸€ä¸ªï¼‰
             var visitedNeighbors = grid.GetFloorNeighbors(current, includeUnvisitedOnly: false)
                                         .FindAll(cell => cell.visited);
             if (visitedNeighbors.Count > 0)
@@ -120,7 +119,7 @@ public class SphereGameMazeGenerator : MonoBehaviour
                 current.visited = true;
                 allFloors.Remove(current);
 
-                // ½« current µÄÎ´·ÃÎÊÁÚ¾Ó¼ÓÈë frontier
+                // å°† current çš„æœªè®¿é—®é‚»å±…åŠ å…¥ frontier
                 var newFrontier = grid.GetFloorNeighbors(current, includeUnvisitedOnly: true);
                 foreach (var cell in newFrontier)
                     if (!frontier.Contains(cell))
@@ -128,17 +127,17 @@ public class SphereGameMazeGenerator : MonoBehaviour
             }
             if (generateNum % generateSpeed == 0)
             {
-                yield return null; // ³õÊ¼ÉèÖÃÎªÃ¿Ö¡Ò»²½£¬±ãÓÚ¹Û²ì
+                yield return null; // åˆå§‹è®¾ç½®ä¸ºæ¯å¸§ä¸€æ­¥ï¼Œä¾¿äºè§‚å¯Ÿ
             }
             
         }
         OnGenerationFinished?.Invoke();
     }
 
-    // ---------- µİ¹é»ØËİ£¨Éî¶ÈÓÅÏÈ£©Ëã·¨ ----------
+    // ---------- é€’å½’å›æº¯ï¼ˆæ·±åº¦ä¼˜å…ˆï¼‰ç®—æ³• ----------
     private IEnumerator RecursiveBacktrackGenerator()
     {
-        // Ëæ»úÑ¡Æğµã
+        // éšæœºé€‰èµ·ç‚¹
         int startX = Random.Range(0, width);
         int startY = Random.Range(0, length);
         SphereGameMazeGrid.Cell start = grid.GetRoomCell(startX, startY);

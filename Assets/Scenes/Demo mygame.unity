@@ -1010,6 +1010,7 @@ MonoBehaviour:
   zoomSpeed: 1
   minRadius: 1
   maxRadius: 10
+  zoomSmoothTime: 0.15
   firstCamera: {fileID: 0}
   firstFllow: {fileID: 0}
   firstLookAT: {fileID: 0}

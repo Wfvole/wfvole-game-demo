@@ -13,7 +13,10 @@ public class ChangePlayerModel : MonoBehaviour
     }
     private void OnDisable()
     {
-        Eventmanager.Instance.RemoveListener("touchPick", CPMtouchpick);
+        if (Eventmanager.Instance != null)
+        {
+            Eventmanager.Instance.RemoveListener("touchPick", CPMtouchpick);
+        }
     }
     void OnTriggerEnter(Collider other)
     {
